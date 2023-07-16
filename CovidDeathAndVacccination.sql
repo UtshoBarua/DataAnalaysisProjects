@@ -19,7 +19,8 @@ where location ='Bangladesh'
 order by 1,2;
 
 #Looking for the highest covid infected locations
-select location,population,max(total_cases) as highest_infection_count, max(total_cases/population)*100 percentage_population_infected
+select location,population,max(total_cases) as highest_infection_count,
+max(total_cases/population)*100 as percentage_population_infected
 from PortfolioProject1.DeathData
 
 group by location,population
